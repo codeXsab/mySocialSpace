@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "username": "test",
+      "email": "test@email.com",
+      "password": "admin",
+      "name": "John Doe"
+    },
+    {
+      "username": "test",
+      "password": "admin"
+    },
+    {
+      "username": "sab",
+      "password": "123456"
+    }
+  ],
+  "posts": [{
+    "desc": "2024 looking good", 
+    "img_url": "https://images.pexels.com/photos/1510595/pexels-photo-1510595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },{
+    "desc": "beauty", 
+    "img_url": "https://images.pexels.com/photos/19089051/pexels-photo-19089051/free-photo-of-brunette-woman-in-black-sitting-with-head-in-hands.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+  },
+    {
+    "desc": "fashion fiesta", 
+    "img_url": "https://images.pexels.com/photos/247204/pexels-photo-247204.jpeg?auto=compress&cs=tinysrgb&w=400"
+  }
+  ]
+}

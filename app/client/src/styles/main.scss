@@ -1,0 +1,19 @@
+@import "./index.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+.main-container {
+    @include themify($themes) {
+        background-color: themed("bgColorSoft");
+    min-width: 100vw;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    height: max-content;
+    }
+}

@@ -1,0 +1,114 @@
+@import "../../styles/index.scss";
+@import "../../styles/variables.scss";
+
+.rightBar {
+  @include themify($themes) {
+    
+    background-color: themed("bgColorSoft");
+    flex: 3;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+    .container {
+      padding: 1.25rem;
+      height: 100%;
+      
+      .item {
+        margin-bottom: 1.25rem;
+        padding: 0.75rem 1.25rem;
+        background-color: themed("bgColor");
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+        -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+        box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+
+        span {
+          color: themed("textColor");
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1.5rem 0;
+          color: $backgroud-secondary-color;
+          gap: 0.75rem;
+          .user-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 1.25rem;
+            position: relative;
+            span{
+              font-size: small;
+              text-wrap: wrap;
+              width: 50px;
+            }
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              object-fit: cover;
+              aspect-ratio: 1/1;
+              object-position: center;
+              gap: 0.8rem;
+            }
+
+            .online {
+              width: 0.8rem;
+              height: 0.8rem;
+              border-radius: 50%;
+              background-color: limegreen;
+              position: absolute;
+              top: 0;
+              left: 40px;
+            }
+
+            p {
+              span {
+                color: themed("textColor");
+              }
+
+              color: themed("textColorSoft");
+            }
+
+            span {
+              display: inline-block;
+              text-align: left;
+              font-weight: 500;
+            }
+          }
+
+          .buttons {
+            display: flex;
+            align-self: center;
+            gap: 5px;
+            button {
+              border: none;
+              padding: 0 10px;
+              color: themed("btnTextColor");
+              cursor: pointer;
+              border-radius: 5px;
+
+              &:first-child {
+                background-color: themed("btnColor");
+              }
+
+              &:last-child {
+                color: themed("btnTextColor2");
+                background-color: themed("bgColor");
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+     @include mobile {
+       display: none;
+     }
+         @include tablet {
+           display: none;
+         }
+}

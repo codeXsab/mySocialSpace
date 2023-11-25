@@ -1,0 +1,108 @@
+@import "../../styles/index.scss";
+@import "../../styles/variables.scss";
+
+.navBar {
+  @include themify($themes) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1.5rem;
+    border-bottom: 1px solid themed("border");
+    height: 3rem;
+    position: sticky;
+    z-index: 999;
+    background-color: themed("bgColor");
+    color: themed("textColor");
+    top: 0;
+    .optional {
+      background-color: blueviolet;
+      @include mobile {
+        display: none;
+      }
+    }
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      span {
+        color: themed("logo");
+        font-weight: bold;
+        font-size: 1.25rem;
+        @include mobile {
+          font-size: 1rem;
+        }
+        @include tablet {
+          font-size: 1rem;
+        }
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid themed("bgColor");
+        border-radius: 5px;
+        padding: 5px;
+
+        input {
+          border: none;
+          width: 20vw;
+          background: transparent;
+          color: themed("textColor");
+          &:focus {
+            outline: none;
+          }
+
+          @include mobile {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+          aspect-ratio: 1/1;
+          object-position: center;
+        }
+
+        span {
+          font-size: 1.5rem;
+          font-weight: 500;
+          @include mobile {
+              display: none;
+            }
+          
+            @include tablet {
+              display: none;
+            }
+        }
+      }
+      button {
+        margin-top: 0.8rem;
+        background-color: themed("btnColor");
+        color: themed("btnTextColor");
+        margin-bottom: 0.75rem;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}
